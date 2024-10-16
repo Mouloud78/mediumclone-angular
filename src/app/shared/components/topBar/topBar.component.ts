@@ -12,8 +12,8 @@ import {selectCurrentUser} from 'src/app/auth/store/reducers'
   imports: [RouterLink, CommonModule],
 })
 export class TopBarComponent {
-  data$ = combineLatest({
-    currentUser$: this.store.select(selectCurrentUser),
+  data = combineLatest({
+    currentUser: this.store.select(selectCurrentUser),
   })
   constructor(private store: Store) {}
 }
